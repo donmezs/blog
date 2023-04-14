@@ -25,7 +25,7 @@ const config = {
     senderGroupId: process.env.SENDER_GROUP_ID,
     emailJsServiceId: process.env.EMAIL_JS_SERVICE_ID,
     emailJsTemplateId: process.env.EMAIL_JS_TEMPLATE_ID,
-    emailJsPk: process.env.EMAIL_JS_PK
+    emailJsPk: process.env.EMAIL_JS_PK,
   },
   presets: [
     [
@@ -45,7 +45,7 @@ const config = {
     ],
   ],
   plugins: [
-    ['./plugins/docusuarusWebpack5Plugin',{}],
+    ["./plugins/docusuarusWebpack5Plugin", {}],
     ["docusaurus-plugin-sass", {}],
     [
       "./plugins/blog-plugin",
@@ -55,9 +55,9 @@ const config = {
         path: "./blog",
         blogSidebarCount: 0,
         showReadingTime: true,
-        postsPerPage: 10
+        postsPerPage: 10,
       },
-    ]
+    ],
   ],
 
   themeConfig:

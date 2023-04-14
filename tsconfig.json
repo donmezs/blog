@@ -4,6 +4,6 @@
   "compilerOptions": {
     "module": "NodeNext",
     "baseUrl": ".",
-    "skipLibCheck": true,
+    "skipLibCheck": true
   }
 }

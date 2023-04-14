@@ -19,7 +19,8 @@ function Footer(props: {}) {
               <div style={{ flexGrow: 1 }}>
                 <h3>Subscribe to the newsletter</h3>
                 <p>
-                Get emails from me about web development, tech, and early access to new articles.
+                  Get emails from me about web development, tech, and early
+                  access to new articles.
                 </p>
                 <SubscribeForm />
                 <SocialLinks />

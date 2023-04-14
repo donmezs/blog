@@ -1,10 +1,10 @@
 import React, { FormEvent, useState } from "react";
 import { FormField } from "./FormField";
 import { NetlifyForm } from "./NetlifyForm";
-import validator from 'validator';
+import validator from "validator";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 export function SubscribeForm(): JSX.Element {
   const { siteConfig } = useDocusaurusContext();
@@ -16,51 +16,49 @@ export function SubscribeForm(): JSX.Element {
 
     if (!validator.isEmail(email)) {
       toast.error("Valid email is required", {
-        icon: '👎',
-        theme: 'colored',
-        position: toast.POSITION.BOTTOM_CENTER
+        icon: "👎",
+        theme: "colored",
+        position: toast.POSITION.BOTTOM_CENTER,
       });
       return;
     }
 
     setIsProcessing(true);
 
-    const url = new URL(
-      `https://api.sender.net/v2/subscribers/`
-    );
-    
+    const url = new URL(`https://api.sender.net/v2/subscribers/`);
+
     let headers = {
-        "Authorization": `Bearer ${siteConfig.customFields.senderToken as string}`,
-        "Content-Type": "application/json",
-        "Accept": "application/json",
+      Authorization: `Bearer ${siteConfig.customFields.senderToken as string}`,
+      "Content-Type": "application/json",
+      Accept: "application/json",
     };
 
     let data = {
-      "email": email,
-      "groups": [`${siteConfig.customFields.senderGroupId as string}`],
-      "trigger_automation": true
+      email: email,
+      groups: [`${siteConfig.customFields.senderGroupId as string}`],
+      trigger_automation: true,
     };
-    
+
     var isSubscribed = await fetch(url + email, {
       method: "GET",
-      headers
-    }).then(response => response.json());
+      headers,
+    }).then((response) => response.json());
 
-    if (isSubscribed.success === undefined)
-    {
+    if (isSubscribed.success === undefined) {
       const message = `This email is already subscribed.`;
       toast.warning(message, {
-        icon: '👽',
+        icon: "👽",
 
-        theme: 'colored',
-        position: toast.POSITION.BOTTOM_CENTER
+        theme: "colored",
+        position: toast.POSITION.BOTTOM_CENTER,
       });
       throw new Error(message);
     }
 
     var res = await fetch(url, {
       method: "POST",
-      headers,body: JSON.stringify(data)
+      headers,
+      body: JSON.stringify(data),
     });
 
     setIsProcessing(false);
@@ -68,24 +66,24 @@ export function SubscribeForm(): JSX.Element {
     if (res.ok) {
       setEmail("");
       toast.success("You're subscribed!", {
-        icon: '👍',
-        theme: 'colored',
-        position: toast.POSITION.BOTTOM_CENTER
+        icon: "👍",
+        theme: "colored",
+        position: toast.POSITION.BOTTOM_CENTER,
       });
     } else {
       const data = await res.json();
 
       if (Array.isArray(data.errors) && data.errors.length) {
         toast.error(data.errors[0].message, {
-          icon: '👎',
-          theme: 'colored',
-          position: toast.POSITION.BOTTOM_CENTER
+          icon: "👎",
+          theme: "colored",
+          position: toast.POSITION.BOTTOM_CENTER,
         });
       } else {
         toast.error("An error occurred. Please try again later.", {
-          icon: '👎',
-          theme: 'colored',
-          position: toast.POSITION.BOTTOM_CENTER
+          icon: "👎",
+          theme: "colored",
+          position: toast.POSITION.BOTTOM_CENTER,
         });
       }
     }
@@ -97,7 +95,7 @@ export function SubscribeForm(): JSX.Element {
         className="row"
         name="subscribe"
         onSubmit={submit}
-        style={{ alignItems: "center",textAlign: "center" }}
+        style={{ alignItems: "center", textAlign: "center" }}
       >
         <div className="col col--9">
           <FormField

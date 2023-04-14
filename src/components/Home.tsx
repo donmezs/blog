@@ -11,9 +11,9 @@ interface HomeProps {
 export function Home({ recentPosts }: HomeProps): JSX.Element {
   return (
     <Layout>
-      <Hero/>
+      <Hero />
       <div className="container margin-top--xl margin-bottom--lg">
-        <AboutMe/>
+        <AboutMe />
       </div>
     </Layout>
   );

@@ -1,7 +1,7 @@
-I&nbsp;write back-end applications in **Go** and modern front-ends using **TypeScript** (**React.js**). I design and implement **GraphQL**, **gRPC** and **REST** APIs.
+I am a software engineer based in Izmir. I have ***5+*** years of experience and counting. I have an extensive background in the full software development lifecycle including design, coding, testing, debugging and maintenance of web and desktop applications using Microsoft technologies (including ***.NET Framework*** and ***modern .NET***), ***MERN*** stack, and ***MEAN*** stack.
 
-I&nbsp;work in a cloud-native environment in the "you build it, you run it" model. Apart from building microservices, I use and extend **Kubernetes**. I am both [Certified Kubernetes Application Developer](https://www.youracclaim.com/badges/4ef650a8-2c5d-48df-bdc7-d7bafdd9e4ec) and [Certified Kubernetes Administrator](https://www.youracclaim.com/badges/32059797-c35c-4c49-bcc3-d27268a530df).
+In addition to my work as a ***.NET*** Developer, I am deeply interested in the ***Web3*** area and its potential to transform the way we interact with digital assets and decentralized networks.
 
-In 2018, I&nbsp;have completed a&nbsp;master's in Computer Science at Silesian University of Technology.
+I absolutely adore being a software developer; it allows me to mix my love of ***coffee*** with my powers of modern-day ***sorcery***, all while wearing my trusty pajamas as I build innovative solutions that can make a meaningful impact in the world.
 
-I'm open source and cloud-native enthusiast. That's why I'm a&nbsp;co-organizer of the&nbsp;[Gophers Silesia](https://www.meetup.com/GophersSilesia) meetup, which is a&nbsp;local community interested in Go & cloud-native topics.
+I am always eager to take on new challenges and collaborate with like-minded professionals. If you are interested in discussing potential opportunities, feel free to connect with me or send me a message.

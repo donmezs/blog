@@ -2,7 +2,7 @@ import clsx from "clsx";
 import React, { FunctionComponent } from "react";
 import useBaseUrl from "@docusaurus/useBaseUrl";
 
-import AboutMeDesc from "./__about-me.md";
+import AboutMeDesc from "./_about-me.md";
 import styles from "./AboutMe.module.scss";
 
 export const AboutMe: FunctionComponent = () => {

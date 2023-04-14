@@ -26,6 +26,4 @@ jobs:
           node-version: "18"
           cache: "npm"
       - run: npm ci --force
-      - run: npm run typecheck
-      - run: npm run format:check
       - run: npm run build

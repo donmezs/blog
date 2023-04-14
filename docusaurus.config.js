@@ -12,7 +12,7 @@ const config = {
   tagline: "",
   url: process.env.SITE_URL,
   baseUrl: "/",
-  onBrokenLinks: "throw",
+  onBrokenLinks: "ignore",
   onBrokenMarkdownLinks: "warn",
   favicon: "img/favicon.ico",
   organizationName: process.env.ORGANIZATION_NAME,

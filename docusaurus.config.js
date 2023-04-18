@@ -84,6 +84,7 @@ const config = {
           alt: "SD Logo",
           href: "/",
           src: "img/logo.png",
+          srcDark: "img/logo_dark.png",
           height: 50,
           width: 50,
         },

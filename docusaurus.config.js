@@ -71,6 +71,7 @@ const config = {
         logo: {
           alt: "SD Logo",
           src: "img/logo.png",
+          srcDark: "img/logo_dark.png",
         },
         items: [
           { to: "/blog", label: "Blog", position: "right" },

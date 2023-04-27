@@ -6,11 +6,16 @@ import Footer from "@theme-original/BlogPostItem/Footer";
 import { useColorMode } from "@docusaurus/theme-common";
 import Giscus from "@giscus/react";
 import { LinkedInLink } from "../../../components/LinkedInLink";
+import BlogPostPaginator from "@theme/BlogPostPaginator";
 
 export default function FooterWrapper(props: {}) {
   const { siteConfig } = useDocusaurusContext();
   const { metadata, isBlogPostPage } = useBlogPost();
   const { colorMode } = useColorMode();
+  const { nextItem, prevItem } = metadata;
+  if (!isBlogPostPage) {
+    return <Footer {...props} />;
+  }
 
   return (
     <>
@@ -18,6 +23,26 @@ export default function FooterWrapper(props: {}) {
         <title>{metadata.title}</title>
       </Head>
       <Footer {...props} />
+      <div
+        className="margin-vert--lg"
+        style={{
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+        }}
+      >
+        <LinkedInLink
+          href={`https://www.linkedin.com/shareArticle?mini=true&url=${encodeURIComponent(
+            `${siteConfig.url}${metadata.permalink}`
+          )}&title=${encodeURIComponent(
+            `I just read "${metadata.title}" by Suleyman Donmez`
+          )}`}
+          title="Share on LinkedIn"
+        />
+      </div>
+      {(nextItem || prevItem) && (
+        <BlogPostPaginator nextItem={nextItem} prevItem={prevItem} />
+      )}
       <div className="margin-vert--xl">
         <Giscus
           id="comments"
@@ -34,23 +59,6 @@ export default function FooterWrapper(props: {}) {
           theme={colorMode}
           lang="en"
           loading="eager"
-        />
-      </div>
-      <div
-        className="margin-vert--lg"
-        style={{
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-        }}
-      >
-        <LinkedInLink
-          href={`https://www.linkedin.com/shareArticle?mini=true&url=${encodeURIComponent(
-            `${siteConfig.url}${metadata.permalink}`
-          )}&title=${encodeURIComponent(
-            `I just read "${metadata.title}" by Suleyman Donmez`
-          )}`}
-          title="Share on LinkedIn"
         />
       </div>
     </>

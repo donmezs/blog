@@ -1,4 +1,4 @@
-I am a software engineer based in Izmir. I have **_5+_** years of experience and counting. I have an extensive background in the full software development lifecycle including design, coding, testing, debugging and maintenance of web and desktop applications using Microsoft technologies (including **_.NET Framework_** and **_modern .NET_**), **_MERN_** stack, and **_MEAN_** stack.
+I am a software engineer based in Izmir. I have **_6+_** years of experience and counting. I have an extensive background in the full software development lifecycle including design, coding, testing, debugging and maintenance of web and desktop applications using Microsoft technologies (including **_.NET Framework_** and **_modern .NET_**), **_MERN_** stack, and **_MEAN_** stack.
 
 In addition to my work as a **_.NET_** Developer, I am deeply interested in the **_Web3_** area and its potential to transform the way we interact with digital assets and decentralized networks.
 

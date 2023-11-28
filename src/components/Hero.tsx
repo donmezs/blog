@@ -8,7 +8,8 @@ export const Hero: FunctionComponent = () => {
         <div className="row">
           <div className="col col--9 col--offset-2">
             <h1 className={clsx("hero__title", "title")}>
-              Hi 👋. I'm <span className="highlighted">Suleyman Donmez</span>,
+              Hi <span className="wave">👋</span>. I'm{" "}
+              <span className="highlighted">Suleyman Donmez</span>,
               <br />a Full-Stack Developer.
             </h1>
             <p className={clsx("hero__subtitle", "subtitle")}>

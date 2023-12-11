@@ -62,6 +62,8 @@ export function SubscribeForm(): JSX.Element {
       body: JSON.stringify(data),
     });
 
+    setIsProcessing(false);
+
     if (res.ok) {
       setEmail("");
       toast.success("You're subscribed!", {

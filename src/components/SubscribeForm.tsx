@@ -55,13 +55,13 @@ export function SubscribeForm(): JSX.Element {
       throw new Error(message);
     }
 
+    setIsProcessing(false);
+
     var res = await fetch(url, {
       method: "POST",
       headers,
       body: JSON.stringify(data),
     });
-
-    setIsProcessing(false);
 
     if (res.ok) {
       setEmail("");

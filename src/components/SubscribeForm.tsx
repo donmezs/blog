@@ -52,10 +52,9 @@ export function SubscribeForm(): JSX.Element {
         theme: "colored",
         position: toast.POSITION.BOTTOM_CENTER,
       });
-      throw new Error(message);
+      setIsProcessing(false);
+      return;
     }
-
-    setIsProcessing(false);
 
     var res = await fetch(url, {
       method: "POST",
